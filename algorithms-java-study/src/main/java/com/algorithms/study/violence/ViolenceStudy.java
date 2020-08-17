@@ -1,4 +1,4 @@
-package com.algorithms.java.study.violence;
+package com.algorithms.study.violence;
 
 public class ViolenceStudy {
     /**

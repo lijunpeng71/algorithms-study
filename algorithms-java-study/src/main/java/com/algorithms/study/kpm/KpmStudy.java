@@ -1,4 +1,4 @@
-package com.algorithms.java.study.kpm;
+package com.algorithms.study.kpm;
 
 public class KpmStudy {
 
