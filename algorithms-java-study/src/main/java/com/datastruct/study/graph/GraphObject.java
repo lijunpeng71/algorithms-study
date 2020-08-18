@@ -68,14 +68,24 @@ public class GraphObject {
         return -1;
     }
 
+    /**
+     * 深度优先遍历核心算法
+     *
+     * @param visited
+     * @param i
+     */
     private void dfs(boolean[] visited, int i) {
+        //首先访问该结点
         System.out.print(getValueByIndex(i) + "->");
+        //将结点设置为已经访问
         visited[i] = true;
+        //查找结点设置为已经访问
         int w = getFirstNeighbor(i);
         while (w != -1) {
             if (!visited[w]) {
                 dfs(visited, w);
             }
+            //如果结点已经被访问过，则获取下一个
             w = getNextNeighbor(i, w);
         }
     }
