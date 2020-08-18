@@ -7,14 +7,17 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>algorithms-java-study</name>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
+                <version>2.3.3.RELEASE</version>
             </plugin>
         </plugins>
     </build>
