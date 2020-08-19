@@ -2,8 +2,12 @@ package com.datastruct.study.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author GW00171873
+ */
 public class GraphObject {
 
     /**
@@ -69,6 +73,19 @@ public class GraphObject {
     }
 
     /**
+     * 深度优先遍历
+     */
+    public void dfs() {
+        visited = new boolean[vertexList.size()];
+        //遍历所有的结点，进行dfs[回溯]
+        for (int i = 0; i < getNumOfVertex(); i++) {
+            if (!visited[i]) {
+                dfs(visited, i);
+            }
+        }
+    }
+
+    /**
      * 深度优先遍历核心算法
      *
      * @param visited
@@ -91,16 +108,56 @@ public class GraphObject {
     }
 
     /**
-     * 深度优先遍历
+     * 广度优先遍历
      */
-    public void dfs() {
+    public void bfs() {
         visited = new boolean[vertexList.size()];
-        //遍历所有的结点，进行dfs[回溯]
         for (int i = 0; i < getNumOfVertex(); i++) {
             if (!visited[i]) {
-                dfs(visited, i);
+                bfs(visited, i);
             }
         }
+    }
+
+    /**
+     * 广度优先和新算法
+     *
+     * @param visited
+     * @param i
+     */
+    private void bfs(boolean[] visited, int i) {
+        //表示队列的头节点对应的下标
+        int u;
+        //邻接节点
+        int w;
+        //队列记录节点访问的顺序
+        LinkedList<Integer> queue = new LinkedList<>();
+        //访问节点输出节点信息
+        System.out.print(getValueByIndex(i) + "=>");
+        //标记为已访问
+        visited[i] = true;
+        //将结点加入队列
+        queue.addLast(i);
+
+        while (!queue.isEmpty()) {
+            //取出队列的头结点下标
+            u = queue.removeFirst();
+            //得到第一个邻接节点的下标
+            w = getFirstNeighbor(u);
+            while (w != -1) {
+                if (!visited[w]) {
+                    System.out.print(getValueByIndex(w) + "=>");
+                    //标记已访问
+                    visited[w] = true;
+                    //入队
+                    queue.addLast(w);
+                }
+                //以u为前驱点，找w后面的下一个邻接点
+                w = getNextNeighbor(u, w);
+            }
+
+        }
+
     }
 
     /**

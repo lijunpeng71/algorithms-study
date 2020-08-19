@@ -23,7 +23,12 @@ public class GraphDemo {
         graphObject.insertEdge(5, 6, 1);
         //显示邻接矩阵
         graphObject.showGraph();
+        //深度优先遍历
+        System.out.println("深度优先遍历：");
         graphObject.dfs();
+        System.out.println();
+        System.out.println("广度优先遍历：");
+        graphObject.bfs();
         System.out.println();
     }
 }
