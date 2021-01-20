@@ -12,6 +12,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.6</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -21,27 +28,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>releases</id>
-            <url>http://139.196.178.196:8081/repository/maven-lpu/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <!-- 发布maven私服 -->
-    <distributionManagement>
-        <repository>
-            <id>lpu-releases</id>
-            <name>lpu</name>
-            <url>http://139.196.178.196:8081/repository/maven-lpu-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>lpu-snapshots</id>
-            <name>lpu</name>
-            <url>http://139.196.178.196:8081/repository/maven-lpu-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
