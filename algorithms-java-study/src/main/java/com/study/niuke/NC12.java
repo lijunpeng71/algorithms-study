@@ -28,38 +28,33 @@ public class NC12 {
             preLeft[i] = pre[i + 1];
             inLeft[i] = in[i];
         }
-        System.out.println("左子树:");
-        System.out.println(Arrays.toString(preLeft));
-        System.out.println(Arrays.toString(inLeft));
         for (int i = index; i < in.length - 1; i++) {
             preRight[i - index] = pre[i + 1];
             inRight[i - index] = in[i + 1];
         }
-        System.out.println("右子树:");
-        System.out.println(Arrays.toString(preRight));
-        System.out.println(Arrays.toString(inRight));
         root.left = reConstructBinaryTree(preLeft, inLeft);
         root.right = reConstructBinaryTree(preRight, inRight);
         return root;
     }
 
-    public static void postOrder(TreeNode root) {
+    public static void preOrder(TreeNode root) {
         if (root == null) {
             return;
         }
+        System.out.print(root.val + "\t");
         if (root.left != null) {
-            postOrder(root.left);
+            preOrder(root.left);
         }
         if (root.right != null) {
-            postOrder(root.right);
+            preOrder(root.right);
         }
-        System.out.println(root.val);
     }
 
     public static void main(String[] args) {
         int[] pre = {1, 2, 3, 4, 5, 6, 7};
         int[] in = {3, 2, 4, 1, 6, 5, 7};
         TreeNode root = reConstructBinaryTree(pre, in);
-        postOrder(root);
+        preOrder(root);
+        System.out.println();
     }
 }
