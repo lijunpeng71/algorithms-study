@@ -1,6 +1,6 @@
-package com.study.niuke;
+package com.study.niuke.nc;
 
-import com.study.niuke.common.ListNode;
+import com.study.common.ListNode;
 
 /**
  * 题目描述

@@ -47,5 +47,8 @@ public class Algorithm001 {
         List<String> list = Arrays.asList("-2#", "E2#", "-2#", "8#", "2#");
         List<String> resultList = sort(givenList, list);
         System.out.println(resultList);
+        Set<String> set = new HashSet<>();
+        set.add("abc");
+        set.add("abc");
     }
 }

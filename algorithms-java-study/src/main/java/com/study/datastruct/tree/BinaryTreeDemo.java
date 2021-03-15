@@ -1,5 +1,7 @@
 package com.study.datastruct.tree;
 
+import java.util.LinkedList;
+
 /**
  * Created on 2021/1/18.
  *
@@ -109,6 +111,30 @@ class BinaryTree {
             System.out.println("二叉树为空，无法查找");
         }
         return null;
+    }
+
+    /**
+     * 逐层遍历
+     *
+     * @return
+     */
+    public void levelOrder() {
+        if (root == null) {
+            return;
+        }
+        LinkedList<HeroNode> list = new LinkedList<>();
+        HeroNode currentNode = null;
+        list.offer(root);
+        while (!list.isEmpty()) {
+            currentNode = list.poll();
+            System.out.print(currentNode.getName() + "=>");
+            if (currentNode.getLeft() != null) {
+                list.offer(currentNode.getLeft());
+            }
+            if (currentNode.getRight() != null) {
+                list.offer(currentNode.getRight());
+            }
+        }
     }
 
 
