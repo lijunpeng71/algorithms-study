@@ -1,5 +1,8 @@
 package com.study.aguigu.datastruct.linkedlist;
 
+/**
+ * @author lijunpeng
+ */
 public class SingleLinkedListObjectDemo {
     public static void main(String[] args) {
         //进行测试
