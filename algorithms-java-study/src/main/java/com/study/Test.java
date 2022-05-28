@@ -1,12 +1,11 @@
 package com.study;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.ByteBuffer;
 
 public class Test {
+
+    static ByteBuffer byteBuffer;
     public static void main(String[] args) {
-        int n = 9;
-        int rightOne = n & ((~n) + 1);
-        System.out.println(rightOne);
+        byteBuffer=ByteBuffer.allocateDirect(128*1024*1024);
     }
 }
