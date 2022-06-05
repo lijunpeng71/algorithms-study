@@ -1,11 +1,18 @@
 package com.study;
 
-import java.nio.ByteBuffer;
-
+/**
+ * @author lijunpeng
+ */
 public class Test {
 
-    static ByteBuffer byteBuffer;
     public static void main(String[] args) {
-        byteBuffer=ByteBuffer.allocateDirect(128*1024*1024);
+        int a = 16;
+        int b = 603;
+        System.out.println("交换前：a=" + a + "\t b=" + b);
+        System.out.println(b);
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println("交换后：a=" + a + "\t b=" + b);
     }
 }
