@@ -1,7 +1,8 @@
-package com.study.zuoshen.class01;
+package com.study.zuoshen;
 
 /**
- * 找满足>=value的最左位置
+ * @author lijunpeng02
+ * @date 2023年02月10日 10:42
  */
 public class Code05_BSNearLeft {
     /**
@@ -11,12 +12,10 @@ public class Code05_BSNearLeft {
      * @param value
      * @return
      */
-    public static int nearestIndex(int[] arr, int value) {
-        int L = 0;
-        int R = arr.length - 1;
-        //记录最左的位置
+    public static int bsNearLeft(int[] arr, int value) {
+        int L = 0, R = arr.length - 1;
         int index = -1;
-        while (L < R) {
+        while (L <= R) {
             int mid = L + ((R - L) >> 1);
             if (arr[mid] >= value) {
                 index = mid;
@@ -29,8 +28,9 @@ public class Code05_BSNearLeft {
     }
 
     public static void main(String[] args) {
-        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int index = nearestIndex(arr, 6);
+        int[] arr = {0, 1, 2, 3, 4, 6, 6, 7, 8, 9};
+        int index = bsNearLeft(arr, 6);
         System.out.println(index);
     }
+
 }
