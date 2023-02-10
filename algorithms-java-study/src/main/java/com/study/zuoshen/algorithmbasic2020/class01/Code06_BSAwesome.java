@@ -1,4 +1,4 @@
-package com.study.zuoshen;
+package com.study.zuoshen.algorithmbasic2020.class01;
 
 /**
  * @author lijunpeng02

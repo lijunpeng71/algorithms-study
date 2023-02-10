@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:algorithms-java-study/src/main/java/com/study/zuoshen/Code05_BSNearLeft.java
+package com.study.zuoshen.algorithmbasic2020.class01;<<<<<<<< HEAD:algorithms-java-study/src/main/java/com/study/zuoshen/Code05_BSNearLeft.java
 package com.study.zuoshen;
 
 /**
@@ -11,7 +11,7 @@ package com.study.zuoshen.algorithmbasic2020.class01;
  * Created on 2022/6/1.
  *
  * @author Administrator
->>>>>>>> origin/master:algorithms-java-study/src/main/java/com/study/zuoshen/algorithmbasic2020/class01/Code05_BSNearLeft.java
+>>>>>>>> origin/master:algorithms-java-study/src/main/java/com/study/zuoshen/algorithmbasic2020/class01/com.study.zuoshen.algorithmbasic2020.class01.Code05_BSNearLeft.java
  */
 public class Code05_BSNearLeft {
 
