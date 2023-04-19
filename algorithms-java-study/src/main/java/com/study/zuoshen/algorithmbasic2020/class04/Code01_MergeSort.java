@@ -60,7 +60,7 @@ public class Code01_MergeSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {9, 2, 8, 5, 3, 6, 7, 1, 4, 0};
+        int[] arr = {9, 2, 8, 5, 3, 7, 6, 1, 4, 0};
         mergeSortV1(arr);
         System.out.println(ArrayUtil.toString(arr));
     }
