@@ -44,3 +44,4 @@ nbdist/
 !*/build/*.html
 !*/build/*.xml
 **/out/
+**/output/
